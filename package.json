@@ -1,0 +1,22 @@
+{
+  "name": "jwt",
+  "version": "1.0.0",
+  "description": "Monorepo for JWT Test project",
+  "private": true,
+  "workspaces": [
+    "auth-server",
+    "data-server",
+    "frontend"
+  ],
+  "scripts": {
+    "start:auth": "npm run start --workspace=auth-server",
+    "start:data": "npm run start --workspace=data-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

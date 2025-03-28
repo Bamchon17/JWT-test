@@ -1,0 +1,23 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.8.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Bamchon17/Frontend-index-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bamchon17/Frontend-index-test/issues"
+  },
+  "homepage": "https://github.com/Bamchon17/Frontend-index-test#readme",
+  "description": ""
+}

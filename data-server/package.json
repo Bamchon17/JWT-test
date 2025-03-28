@@ -1,0 +1,24 @@
+{
+  "name": "data-server",
+  "version": "1.0.0",
+  "main": "data-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "cors": "^2.8.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Bamchon17/Data-server-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bamchon17/Data-server-test/issues"
+  },
+  "homepage": "https://github.com/Bamchon17/Data-server-test#readme",
+  "description": ""
+}
