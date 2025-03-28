@@ -1,23 +1,15 @@
-/// express → ใช้สร้าง API, jsonwebtoken → ใช้สร้างและตรวจสอบ JWT
 const express = require('express');
 const jwt = require('jsonwebtoken');
+const cors = require('cors');
 const app = express();
 
-// Middleware เพื่ออ่าน JSON (ถ้ามี body)
+// Middleware เพื่ออ่าน JSON
 app.use(express.json());
 
 // เพิ่ม CORS
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
-  if (req.method === 'OPTIONS') {
-    res.header('Access-Control-Allow-Methods', 'GET, POST');
-    return res.status(200).json({});
-  }
-  next();
-});
+app.use(cors());
 
-// Secret key เดียวกับ Auth Server (ต้องตรงกัน) ใช้ Symmetric Key
+// Secret key จาก Environment Variable
 const JWT_SECRET = 'my-secure-key';
 
 // Endpoint รับ JWT และส่งข้อมูลกลับ
@@ -41,13 +33,12 @@ app.get('/data', (req, res) => {
     });
   } catch (error) {
     // ถ้า JWT ผิดหรือหมดอายุ
-    res.status(401).json({ error: 'Invalid or expired token' });
+    res.status(401).json({ error: `Invalid or expired token: ${error.message}` });
   }
-
 });
 
 // เริ่มเซิร์ฟเวอร์
-const PORT = process.env.PORT || 4000; // ใช้ port ต่างจาก Auth Server
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Data Server running on port ${PORT}`);
 });
