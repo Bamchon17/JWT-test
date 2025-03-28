@@ -1,14 +1,29 @@
 {
   "name": "auth-server",
   "version": "1.0.0",
-  "description": "Auth Server for JWT authentication",
   "main": "auth-server.js",
   "scripts": {
-    "start": "node auth-server.js"
+    "start": "node auth-server.js",
+    "start:auth": "nodemon auth-server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
     "cors": "^2.8.5"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Bamchon17/my-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bamchon17/my-project/issues"
+  },
+  "homepage": "https://github.com/Bamchon17/my-project#readme",
+  "description": "Auth Server for JWT authentication"
 }
