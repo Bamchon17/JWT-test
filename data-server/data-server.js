@@ -37,7 +37,7 @@ app.get('/data', (req, res) => {
   }
 });
 
-// เริ่มเซิร์ฟเวอร์
+// เริ่มเซิร์ฟเวอร์เลย 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Data Server running on port ${PORT}`);
